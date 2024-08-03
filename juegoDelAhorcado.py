@@ -6,7 +6,7 @@ import time
 
 
 def bienvenidos():
-    print("Bienvenidos al juego del ahorcado")
+    print("Bienvenidos al Juego Del Ahorcado!!!")
 
 def random_palabra():
     list_palabras =["zapato","casa","árbol","computadora"]
