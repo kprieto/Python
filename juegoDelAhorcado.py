@@ -99,7 +99,7 @@ def reinicioJuegoAhorcado():
     juegoAhorcado(palabra_secreta)
 
 def inicioJuegoAhorcado():
-    inicio = input("¿Quieres iniciar el juego del ahorcado (s/n)?:").lower()
+    inicio = input("¿Quieres iniciar el juego del ahorcado? (s/n):").lower()
     return inicio
 
 def limpiarPantalla():
