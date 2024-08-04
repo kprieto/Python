@@ -2,6 +2,7 @@
 import random
 import os
 import time
+import sys
 #from google.colab import output
 
 
@@ -103,16 +104,26 @@ def inicioJuegoAhorcado():
     return inicio
 
 def limpiarPantalla():
-    os.system('cls||clear')
+    if os.name == "posix":
+        os.system ("clear")
+    elif os.name == "ce" or os.name == "nt" or os.name == "dos":
+        os.system ("cls")
 
 def cuentaRegresiva(t):   
+    #while t:
+        #mins, secs = divmod(t, 60)
+        #timer = '{:02d}:{:02d}'.format(mins, secs)
+        #print("Iniciamos el juego en "+ timer, end="\r")
+        #time.sleep(1)
+        #t -= 1  
     while t:
         mins, secs = divmod(t, 60)
         timer = '{:02d}:{:02d}'.format(mins, secs)
-        print("Iniciamos el juego en "+ timer, end="\r")
+        timestr = '\rIniciamos  el juego en\t' + timer
+        sys.stdout.write(timestr)
+        sys.stdout.flush()
         time.sleep(1)
-        t -= 1  
-
+        t -= 1
 def juegoAhorcado(palabra_secreta):
   letras_ingresadas = []
   intentos_maximos = 6
