@@ -91,10 +91,10 @@ def imprimirDibujoAhorcado(intentos):
         """)
 
 def reinicioJuegoAhorcado():
+    print("Gracias por jugar al ahorcado.")
     cuentaRegresiva(int(5))
     limpiarPantalla()
-    #output.clear()
-    print("Gracias por jugar al ahorcado.")
+    #output.clear()    
     bienvenidos()
     palabra_secreta = random_palabra()
     juegoAhorcado(palabra_secreta)
@@ -112,7 +112,7 @@ def limpiarPantalla():
         print(chr(27) + "[2J")
 
 def cuentaRegresiva(t): 
-    while t:
+      while t:
         mins, secs = divmod(t, 60)
         timer = '{:02d}:{:02d}'.format(mins, secs)
         timestr = '\rIniciamos  el juego en\t' + timer
