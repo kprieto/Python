@@ -19,7 +19,7 @@ def obtener_letra():
       return letra
 
 def validar_letra(letra):
-  if letra.isalpha():
+  if letra.isalpha() and len(letra) == 1:
     return letra
   else:
     print("No es una letra.")
@@ -95,11 +95,11 @@ def reinicioJuegoAhorcado():
     cuentaRegresiva(int(5))
     limpiarPantalla()
     #output.clear()    
-    bienvenidos()
     palabra_secreta = random_palabra()
     juegoAhorcado(palabra_secreta)
 
 def inicioJuegoAhorcado():
+    bienvenidos()
     inicio = input("¿Quieres iniciar el juego del ahorcado? (s/n):").lower()
     return inicio
 
@@ -135,6 +135,7 @@ def juegoAhorcado(palabra_secreta):
   lista_vidas = []
 
   inicio = inicioJuegoAhorcado()
+
   if inicio == "s":
     while vidas < vidas_maximas:
         letra = obtener_letra()
@@ -198,6 +199,6 @@ def juegoAhorcado(palabra_secreta):
       print("Gracias por jugar al ahorcado.")
 
 
-bienvenidos()
+
 palabra_secreta = random_palabra()
 juegoAhorcado(palabra_secreta)
