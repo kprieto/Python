@@ -106,6 +106,7 @@ def inicioJuegoAhorcado():
 def limpiarPantalla():
     if os.name == "posix":
         os.system ("clear")
+        print(chr(27) + "[2J")
     elif os.name == "ce" or os.name == "nt" or os.name == "dos":
         os.system ("cls")
         print(chr(27) + "[2J")
@@ -144,9 +145,9 @@ def juegoAhorcado(palabra_secreta):
             print("¡Adivinaste una letra!")
 
         palabra = ""
-        for letra_secreta in palabra_secreta:
-            if letra_secreta in letras_ingresadas:
-                palabra += letra_secreta
+        for letra_seleccionada in palabra_secreta:
+            if letra_seleccionada in letras_ingresadas:
+                palabra += letra_seleccionada
             else:
                 palabra += " _ "
         print("Palabra: " + palabra)
