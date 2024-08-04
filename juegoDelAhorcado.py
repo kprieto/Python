@@ -109,13 +109,7 @@ def limpiarPantalla():
     elif os.name == "ce" or os.name == "nt" or os.name == "dos":
         os.system ("cls")
 
-def cuentaRegresiva(t):   
-    #while t:
-        #mins, secs = divmod(t, 60)
-        #timer = '{:02d}:{:02d}'.format(mins, secs)
-        #print("Iniciamos el juego en "+ timer, end="\r")
-        #time.sleep(1)
-        #t -= 1  
+def cuentaRegresiva(t): 
     while t:
         mins, secs = divmod(t, 60)
         timer = '{:02d}:{:02d}'.format(mins, secs)
@@ -123,7 +117,8 @@ def cuentaRegresiva(t):
         sys.stdout.write(timestr)
         sys.stdout.flush()
         time.sleep(1)
-        t -= 1
+        t -= 1  
+
 def juegoAhorcado(palabra_secreta):
   letras_ingresadas = []
   intentos_maximos = 6
