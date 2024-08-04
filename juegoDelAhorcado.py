@@ -124,7 +124,7 @@ def cuentaRegresiva(t):
 def vidasMarcador(vidas_restantes):
     lista_vidas = []
     if vidas_restantes == 0:
-        lista_vidas.append("0")
+        lista_vidas.append("\U0001F17E")
 
     for i in range(int(vidas_restantes)):
         lista_vidas.append("\U00002B55")
@@ -159,7 +159,7 @@ def juegoAhorcado(palabra_secreta):
             lista_vidas = vidasMarcador(int(vidas_restantes))
             imprimirDibujoAhorcado(vidas)
             dibujoVidas = " ".join(lista_vidas)
-            print(f"Letra {letra} incorrecta. Te quedan {dibujoVidas} vidas.")
+            print(f"Letra {letra} incorrecta. Te quedan {dibujoVidas}  vidas.")
         else:
             print("¡Adivinaste una letra!")
 
@@ -193,7 +193,7 @@ def juegoAhorcado(palabra_secreta):
                     lista_vidas = vidasMarcador(int(vidas_restantes))
                     imprimirDibujoAhorcado(vidas)
                     dibujoVidas = " ".join(lista_vidas)
-                    print(f"{palabra_ingresada} incorrecta. Te quedan {dibujoVidas} vidas.")
+                    print(f"{palabra_ingresada} incorrecta. Te quedan {dibujoVidas}  vidas.")
 
 
     if vidas == vidas_maximas:
