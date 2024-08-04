@@ -185,7 +185,6 @@ def juegoAhorcado(palabra_secreta):
             else:
                 vidas += 1
                 vidas_restantes = vidas_maximas - vidas
-                print(vidas_restantes)
                 lista_vidas = vidasMarcador(int(vidas_restantes))
                 imprimirDibujoAhorcado(vidas)
                 dibujoVidas = " ".join(lista_vidas)
