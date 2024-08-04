@@ -123,8 +123,12 @@ def cuentaRegresiva(t):
 
 def vidasMarcador(vidas_restantes):
     lista_vidas = []
+    if vidas_restantes == 0:
+        lista_vidas.append("0")
+
     for i in range(int(vidas_restantes)):
         lista_vidas.append("\U00002B55")
+
     return lista_vidas  
 
 def juegoAhorcado(palabra_secreta):
@@ -175,20 +179,21 @@ def juegoAhorcado(palabra_secreta):
             reinicioJuegoAhorcado()
             break
 
-        confirmacion = input("¿Quieres adivinar la palabra? (s/n): ").lower()
-        if confirmacion == "s":
-            palabra_ingresada = validar_palabra(input("Introduce la palabra: ").lower())
-            if palabra_ingresada == palabra_secreta:
-                print("¡Ganaste! Has adivinado la palabra.")
-                reinicioJuegoAhorcado()
-                break
-            else:
-                vidas += 1
-                vidas_restantes = vidas_maximas - vidas
-                lista_vidas = vidasMarcador(int(vidas_restantes))
-                imprimirDibujoAhorcado(vidas)
-                dibujoVidas = " ".join(lista_vidas)
-                print(f"{palabra_ingresada} incorrecta. Te quedan {dibujoVidas} vidas.")
+        if vidas_restantes != 0:
+            confirmacion = input("¿Quieres adivinar la palabra? (s/n): ").lower()
+            if confirmacion == "s":
+                palabra_ingresada = validar_palabra(input("Introduce la palabra: ").lower())
+                if palabra_ingresada == palabra_secreta:
+                    print("¡Ganaste! Has adivinado la palabra.")
+                    reinicioJuegoAhorcado()
+                    break
+                else:
+                    vidas += 1
+                    vidas_restantes = vidas_maximas - vidas
+                    lista_vidas = vidasMarcador(int(vidas_restantes))
+                    imprimirDibujoAhorcado(vidas)
+                    dibujoVidas = " ".join(lista_vidas)
+                    print(f"{palabra_ingresada} incorrecta. Te quedan {dibujoVidas} vidas.")
 
 
     if vidas == vidas_maximas:
