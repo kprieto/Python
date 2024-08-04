@@ -22,7 +22,7 @@ def validar_letra(letra):
   if letra.isalpha() and len(letra) == 1:
     return letra
   else:
-    print("No es una letra.")
+    print("Solo se permite una letra.")
     return  validar_letra(obtener_letra())
 
 def validar_palabra(palabra):
@@ -125,7 +125,7 @@ def vidasMarcador(vidas_restantes):
     lista_vidas = []
     for i in range(int(vidas_restantes)):
         lista_vidas.append("\U00002B55")
-    return lista_vidas
+    return lista_vidas  
 
 def juegoAhorcado(palabra_secreta):
   letras_ingresadas = []
@@ -175,8 +175,8 @@ def juegoAhorcado(palabra_secreta):
             reinicioJuegoAhorcado()
             break
 
-        palabra_nueva = input("¿Quieres adivinar la palabra? (s/n): ").lower()
-        if palabra_nueva == "s":
+        confirmacion = input("¿Quieres adivinar la palabra? (s/n): ").lower()
+        if confirmacion == "s":
             palabra_ingresada = validar_palabra(input("Introduce la palabra: ").lower())
             if palabra_ingresada == palabra_secreta:
                 print("¡Ganaste! Has adivinado la palabra.")
@@ -195,8 +195,8 @@ def juegoAhorcado(palabra_secreta):
     if vidas == vidas_maximas:
         print(f"¡Perdiste! La palabra secreta era: {palabra_secreta}")
         reinicioJuegoAhorcado()
-  else:
-      print("Gracias por jugar al ahorcado.")
+    else:
+        print("Gracias por jugar al ahorcado.")
 
 
 
