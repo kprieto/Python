@@ -4,7 +4,7 @@ import os
 import time
 import sys
 #from google.colab import output
-
+from colorama import init, Fore, Style
 
 def bienvenidos():
     print("¡¡¡Bienvenidos al Juego Del Ahorcado!!!")
@@ -33,8 +33,9 @@ def validar_palabra(palabra):
       return validar_palabra(input("Introduce la palabra: ").lower())
 
 def imprimirDibujoAhorcado(intentos):
+    init()
     if intentos == 1:
-        print("""
+        print(Fore.GREEN+"""
                        ___
                       |   |
                       O   |
@@ -43,7 +44,7 @@ def imprimirDibujoAhorcado(intentos):
                     ______|
         """)
     elif intentos == 2:
-        print("""
+        print(Fore.GREEN+"""
                        ___
                       |   |
                       O_  |
@@ -53,7 +54,7 @@ def imprimirDibujoAhorcado(intentos):
         """)
 
     elif intentos == 3:
-        print("""
+        print(Fore.GREEN+"""
                        ___
                       |   |
                      _O_  |
@@ -63,7 +64,7 @@ def imprimirDibujoAhorcado(intentos):
         """)
 
     elif intentos == 4:
-      print("""
+      print(Fore.GREEN+"""
                        ___
                       |   |
                      _O_  |
@@ -72,7 +73,7 @@ def imprimirDibujoAhorcado(intentos):
                     ______|
         """)
     elif intentos == 5:
-        print("""
+        print(Fore.GREEN+"""
                        ___
                       |   |
                      _O_  |
@@ -81,7 +82,7 @@ def imprimirDibujoAhorcado(intentos):
                     ______|
         """)
     elif intentos == 6:
-        print("""
+        print(Fore.GREEN+"""
                        ___
                       |   |
                      _O_  |
@@ -89,6 +90,7 @@ def imprimirDibujoAhorcado(intentos):
                      / \  |
                     ______|
         """)
+    print(Style.RESET_ALL, end="")
 
 def reinicioJuego():
     cuentaRegresiva(int(5))
