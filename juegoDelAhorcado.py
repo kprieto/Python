@@ -197,6 +197,7 @@ def juegoAhorcado(palabra_secreta):
             if vidas == vidas_maximas:
                 print(f"¡Perdiste! La palabra secreta era: {palabra_secreta}")
                 reinicioJuegoAhorcado()
+                break
   else:
     print("Gracias por jugar al ahorcado.")     
 
