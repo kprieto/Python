@@ -184,7 +184,8 @@ def juegoAhorcado(palabra_secreta):
                 palabra_ingresada = validar_palabra(input("Introduce la palabra: ").lower())
                 if palabra_ingresada == palabra_secreta:
                     print("¡Ganaste! Has adivinado la palabra.")
-                    reinicioJuegoAhorcado()     
+                    reinicioJuegoAhorcado()
+                    break    
                 else:
                     vidas += 1
                     vidas_restantes = vidas_maximas - vidas
