@@ -90,12 +90,11 @@ def imprimirDibujoAhorcado(intentos):
                     ______|
         """)
 
-def reinicioJuegoAhorcado():
+def reinicioJuego():
     cuentaRegresiva(int(5))
     limpiarPantalla()
-    #output.clear()    
-    palabra_secreta = random_palabra()
-    juegoAhorcado(palabra_secreta)
+    #output.clear()
+    juegoAhorcado()
 
 def inicioJuegoAhorcado():
     bienvenidos()
@@ -130,13 +129,14 @@ def vidasMarcador(vidas_restantes):
 
     return lista_vidas  
 
-def juegoAhorcado(palabra_secreta):
+def juegoAhorcado():
   letras_ingresadas = []
   vidas_maximas = 6
   vidas = 0
   vidas_restantes = 0
   lista_vidas = []
 
+  palabra_secreta = random_palabra()
   inicio = inicioJuegoAhorcado()
 
   if inicio == "s":
@@ -175,7 +175,7 @@ def juegoAhorcado(palabra_secreta):
 
             if palabra == palabra_secreta:
                 print("¡Ganaste! Has adivinado la palabra.")
-                reinicioJuegoAhorcado()
+                reinicioJuego()
                 break
 
             if vidas < vidas_maximas:
@@ -184,7 +184,7 @@ def juegoAhorcado(palabra_secreta):
                     palabra_ingresada = validar_palabra(input("Introduce la palabra: ").lower())
                     if palabra_ingresada == palabra_secreta:
                         print("¡Ganaste! Has adivinado la palabra.")
-                        reinicioJuegoAhorcado()
+                        reinicioJuego()
                         break    
                     else:
                         vidas += 1
@@ -196,14 +196,15 @@ def juegoAhorcado(palabra_secreta):
             
             if vidas == vidas_maximas:
                 print(f"¡Perdiste! La palabra secreta era: {palabra_secreta}")
-                reinicioJuegoAhorcado()
+                reinicioJuego()                
                 break
   else:
-    print("Gracias por jugar al ahorcado.")     
+      print("Gracias por jugar al ahorcado.")
+      time.sleep(5)
 
 
 
 
 
-palabra_secreta = random_palabra()
-juegoAhorcado(palabra_secreta)
+
+juegoAhorcado()
