@@ -91,7 +91,6 @@ def imprimirDibujoAhorcado(intentos):
         """)
 
 def reinicioJuegoAhorcado():
-    print("Gracias por jugar al ahorcado.")
     cuentaRegresiva(int(5))
     limpiarPantalla()
     #output.clear()    
@@ -179,14 +178,13 @@ def juegoAhorcado(palabra_secreta):
             reinicioJuegoAhorcado()
             break
 
-        if vidas_restantes != 0:
+        if vidas < vidas_maximas:
             confirmacion = input("¿Quieres adivinar la palabra? (s/n): ").lower()
             if confirmacion == "s":
                 palabra_ingresada = validar_palabra(input("Introduce la palabra: ").lower())
                 if palabra_ingresada == palabra_secreta:
                     print("¡Ganaste! Has adivinado la palabra.")
-                    reinicioJuegoAhorcado()
-                    break
+                    reinicioJuegoAhorcado()     
                 else:
                     vidas += 1
                     vidas_restantes = vidas_maximas - vidas
