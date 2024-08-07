@@ -10,7 +10,13 @@ def bienvenidos():
     print("¡¡¡Bienvenidos al Juego Del Ahorcado!!!")
 
 def random_palabra():
-    list_palabras =["zapato","casa","árbol","computadora"]
+    list_palabras =["zapato","casa","árbol","computadora","jardin", "cielo", "mesa", "silla", 
+    "coche", "puerta", "ventana", "libro", "escuela", "profesor", "alumno", 
+    "lapiz", "papel", "cuaderno", "telefono","teclado","perro" 
+    "raton", "pantalla", "reloj", "gato", "camisa", "pantalones", "chaqueta", 
+    "sombrero", "vaso", "plato", "cuchara", "tenedor", "cuchillo", "comida", 
+    "bebida", "fruta", "verdura", "carne", "pescado", "huevo", "leche", 
+    "pan", "queso", "agua", "sal", "azucar", "cafe", "te", "arroz"]
     palabra_secreta = random.choice(list_palabras).lower()
     return palabra_secreta
 
