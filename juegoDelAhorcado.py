@@ -21,22 +21,22 @@ def random_palabra():
     return palabra_secreta
 
 def obtener_letra():
-      letra = validar_letra(input("Introduce una letra:").lower())
-      return letra
+    letra = validar_letra(input("Introduce una letra:").lower())
+    return letra
 
 def validar_letra(letra):
-  if letra.isalpha() and len(letra) == 1:
-    return letra
-  else:
-    print("Solo se permite una letra.")
-    return  validar_letra(obtener_letra())
+    if letra.isalpha() and len(letra) == 1:
+        return letra
+    else:
+        print("Solo se permite una letra.")
+        return  validar_letra(obtener_letra())
 
 def validar_palabra(palabra):
     if palabra.isalpha():
-       return palabra
+        return palabra
     else:
-      print("No es una palabra. Solo se permiten letras.")
-      return validar_palabra(input("Introduce la palabra: ").lower())
+        print("No es una palabra. Solo se permiten letras.")
+        return validar_palabra(input("Introduce la palabra: ").lower())
 
 def imprimirDibujoAhorcado(intentos):
     init()
@@ -118,7 +118,7 @@ def limpiarPantalla():
         os.system ("cls")        
 
 def cuentaRegresiva(t): 
-      while t:
+    while t:
         mins, secs = divmod(t, 60)
         timer = '{:02d}:{:02d}'.format(mins, secs)
         timestr = '\rIniciamos  el juego en\t' + timer
@@ -138,77 +138,77 @@ def vidasMarcador(vidas_restantes):
     return lista_vidas  
 
 def juegoAhorcado():
-  letras_ingresadas = []
-  vidas_maximas = 6
-  vidas = 0
-  vidas_restantes = 0
-  lista_vidas = []
+    letras_ingresadas = []
+    vidas_maximas = 6
+    vidas = 0
+    vidas_restantes = 0
+    lista_vidas = []
 
-  palabra_secreta = random_palabra()
-  inicio = inicioJuegoAhorcado()
+    palabra_secreta = random_palabra()
+    inicio = inicioJuegoAhorcado()
 
-  if inicio == "s":
-        while vidas < vidas_maximas:
-            letra = obtener_letra()
+    if inicio == "s":
+            while vidas < vidas_maximas:
+                letra = obtener_letra()
 
-            if letra in letras_ingresadas:
-                print("Ya ingresastes estas letras antes: "+ " ".join(letras_ingresadas))
-                continue
+                if letra in letras_ingresadas:
+                    print("Ya ingresastes estas letras antes: "+ " ".join(letras_ingresadas))
+                    continue
 
-            letras_ingresadas.append(letra)
+                letras_ingresadas.append(letra)
 
-            if vidas_restantes == 0:
-                lista_vidas = vidasMarcador(int(vidas_maximas))
-        
-            if letra not in palabra_secreta:
-                vidas += 1
-                vidas_restantes = vidas_maximas - vidas
-                lista_vidas = vidasMarcador(int(vidas_restantes))
-                imprimirDibujoAhorcado(vidas)
-                dibujoVidas = " ".join(lista_vidas)
-                print(f"Letra {letra} incorrecta. Te quedan {dibujoVidas}  vidas.")
-            else:
-                print("¡Adivinaste una letra!")
-
-            palabra = ""
-            for letra_seleccionada in palabra_secreta:
-                if letra_seleccionada in letras_ingresadas:
-                    palabra += letra_seleccionada
+                if vidas_restantes == 0:
+                    lista_vidas = vidasMarcador(int(vidas_maximas))
+            
+                if letra not in palabra_secreta:
+                    vidas += 1
+                    vidas_restantes = vidas_maximas - vidas
+                    lista_vidas = vidasMarcador(int(vidas_restantes))
+                    imprimirDibujoAhorcado(vidas)
+                    dibujoVidas = " ".join(lista_vidas)
+                    print(f"Letra {letra} incorrecta. Te quedan {dibujoVidas}  vidas.")
                 else:
-                    palabra += " _ "
-            
-            print("Vidas: "+" ".join(lista_vidas))
-            print("Palabra: " + palabra)
-            print("Ya ingresastes estas letras antes: "+ " ".join(letras_ingresadas))
+                    print("¡Adivinaste una letra!")
 
-            if palabra == palabra_secreta:
-                print("¡Ganaste! Has adivinado la palabra.")
-                reinicioJuego()
-                break
-
-            if vidas < vidas_maximas:
-                confirmacion = input("¿Quieres adivinar la palabra? (s/n): ").lower()
-                if confirmacion == "s":
-                    palabra_ingresada = validar_palabra(input("Introduce la palabra: ").lower())
-                    if palabra_ingresada == palabra_secreta:
-                        print("¡Ganaste! Has adivinado la palabra.")
-                        reinicioJuego()
-                        break    
+                palabra = ""
+                for letra_seleccionada in palabra_secreta:
+                    if letra_seleccionada in letras_ingresadas:
+                        palabra += letra_seleccionada
                     else:
-                        vidas += 1
-                        vidas_restantes = vidas_maximas - vidas
-                        lista_vidas = vidasMarcador(int(vidas_restantes))
-                        imprimirDibujoAhorcado(vidas)
-                        dibujoVidas = " ".join(lista_vidas)
-                        print(f"{palabra_ingresada} incorrecta. Te quedan {dibujoVidas}  vidas.")
-            
-            if vidas == vidas_maximas:
-                print(f"¡Perdiste! La palabra secreta era: {palabra_secreta}")
-                reinicioJuego()                
-                break
-  else:
-      print("Gracias por jugar al ahorcado.")
-      time.sleep(5)
+                        palabra += " _ "
+                
+                print("Vidas: "+" ".join(lista_vidas))
+                print("Palabra: " + palabra)
+                print("Ya ingresastes estas letras antes: "+ " ".join(letras_ingresadas))
+
+                if palabra == palabra_secreta:
+                    print("¡Ganaste! Has adivinado la palabra.")
+                    reinicioJuego()
+                    break
+
+                if vidas < vidas_maximas:
+                    confirmacion = input("¿Quieres adivinar la palabra? (s/n): ").lower()
+                    if confirmacion == "s":
+                        palabra_ingresada = validar_palabra(input("Introduce la palabra: ").lower())
+                        if palabra_ingresada == palabra_secreta:
+                            print("¡Ganaste! Has adivinado la palabra.")
+                            reinicioJuego()
+                            break    
+                        else:
+                            vidas += 1
+                            vidas_restantes = vidas_maximas - vidas
+                            lista_vidas = vidasMarcador(int(vidas_restantes))
+                            imprimirDibujoAhorcado(vidas)
+                            dibujoVidas = " ".join(lista_vidas)
+                            print(f"{palabra_ingresada} incorrecta. Te quedan {dibujoVidas}  vidas.")
+                
+                if vidas == vidas_maximas:
+                    print(f"¡Perdiste! La palabra secreta era: {palabra_secreta}")
+                    reinicioJuego()                
+                    break
+    else:
+        print("Gracias por jugar al ahorcado.")
+        time.sleep(5)
 
 
 
