@@ -35,6 +35,8 @@
     
 12. Ganar o perder: El juego termina cuando se adivina toda la palabra secreta antes de completar el dibujo del ahorcado (ganas), o cuando se completa el dibujo sin adivinar la palabra secreta (pierdes).
 
+Link: [Juego del Ahorcado](https://github.com/kprieto/Python/blob/main/juegoDelAhorcado.py). 
+
 ## Juego de Piedra, Papel o Tijera
 > El juego de piedra, papel o tijera es un clásico y sencillo juego de azar para dos o más personas.
 > 
@@ -52,6 +54,9 @@
    3. Papel envuelve a piedra.
    4. Empate: Si ambos muestran el mismo gesto.
 
+Link: [Juego de Piedra, papel o tijera](https://github.com/kprieto/Python/blob/main/juegoPiedraPapelTijera.py).
+
+
 ## Juego de Trivia sobre Python
 > Un juego de trivia es una excelente forma de poner a prueba tus conocimientos y divertirte al mismo tiempo.
 > 
@@ -66,6 +71,8 @@
 5. Conteo de puntos: Se implementa un sistema para llevar la cuenta de los aciertos y errores del jugador.
 6. Puntación: Al finalizar el juego de mostrará un mensaje con la puntuación obtenida de la trivia.
    <img src="https://github.com/kprieto/Python/blob/main/imagenes/resultado.png" alt="Puntuación" >
+
+Link: [Juego de Trivia](https://github.com/kprieto/Python/blob/main/juegoTrivia.py).
 
 ## Catálogo de Películas
 > Un catálogo de películas es como una biblioteca, pero en lugar de libros, contiene información sobre películas.
@@ -82,3 +89,4 @@
 4. Despedida: Mensaje de despedida por ingresar al Catálogo de Películas.
    <img src="https://github.com/kprieto/Python/blob/main/imagenes/mensajeD.png" alt="Mensaje Despedida"> 
    
+Link: [Catálogo de Películas](https://github.com/kprieto/Python/blob/main/ProyectoCatalagoPeliculas/CatalogoPelicula.py).
