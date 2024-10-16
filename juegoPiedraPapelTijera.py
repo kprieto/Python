@@ -10,22 +10,22 @@ def juegoPiedraPapeloTijera():
         jugador = input("Elige una opción para el juego: Piedra o Papel o Tijera o Terminar:").capitalize()
         
         if computadora == "Piedra" and jugador == "Tijera":
-            print("La computadora ha ganado: Piedra aplasta la Tijera.")
+            print("La computadora ha ganado: ✊ aplasta la ✌️.")
             perdistes += 1
         elif computadora == "Tijera" and jugador == "Papel":
-            print("La computadora ha ganado: Tijera corta el Papel.")
+            print("La computadora ha ganado: ✌️  corta el ✋.")
             perdistes += 1
         elif computadora == "Papel" and jugador == "Piedra":
-            print("La computadora ha ganado: Papel envuelve la Piedra.")
+            print("La computadora ha ganado: ✋ envuelve la ✊.")
             perdistes += 1
         elif jugador == "Piedra" and computadora == "Tijera":
-            print("Le haz ganado a la computadora: Piedra aplasta la Tijera.")
+            print("Le haz ganado a la computadora: ✊ aplasta la ✌️.")
             ganastes += 1
         elif jugador == "Tijera" and computadora == "Papel":
-            print("Le haz ganado a la computadora: Tijera corta el Papel.")
+            print("Le haz ganado a la computadora: ✌️  corta el ✋.")
             ganastes += 1            
         elif jugador == "Papel" and computadora == "Piedra":
-            print("Le haz ganado a la computadora: Papel envuelve la Piedra.")
+            print("Le haz ganado a la computadora: ✋ envuelve la ✊.")
             ganastes += 1        
         elif jugador == "Terminar":
             terminar = False
