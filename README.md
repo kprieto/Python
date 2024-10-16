@@ -9,6 +9,13 @@
 > 
 > El objetivo es adivinar una palabra secreta antes de que se complete el dibujo de un ahorcado.
 
+**Requerimientos**
+
+El programa cuenta con el módulo Colorama que permite darle color a la consola y es necesario instalarlo previamente. Para esto abra la terminal y ejecute el siguiente comando:
+`pip install colorama`
+
+Esta instalación debe hacerse la primera vez que use el programa.
+
 **¿Cómo se juega?**
 1. Elección de la palabra: La computadora selecciona una palabra secreta de una lista. La cuál no será visible para el jugador.
 2. Dibujo de la horca.
@@ -78,6 +85,13 @@ Link: [Juego de Trivia](https://github.com/kprieto/Python/blob/main/juegoTrivia.
 > Un catálogo de películas es como una biblioteca, pero en lugar de libros, contiene información sobre películas.
 > 
 > Es una herramienta muy útil para organizar, buscar y descubrir nuevas películas.
+
+**Requerimientos**
+
+El programa cuenta con el módulo Colorama que permite darle color a la consola y es necesario instalarlo previamente. Para esto abra la terminal y ejecute el siguiente comando:
+`pip install colorama`
+
+Esta instalación debe hacerse la primera vez que use el programa.
 
 **¿Comó se utiliza?**
 1. Bienvenida al Catálogo de Películas.
