@@ -71,12 +71,11 @@ Link: [Juego de Piedra, papel o tijera](https://github.com/kprieto/Python/blob/m
 
 **¿Cómo se juega?**
 1. Datos inciales: El jugador debe ingresar su nombre y edad. El jugador debe ser mayor de edad para iniciar el juego de la trivia.
-2. Generación aleatoria: Se emplea la función random de Python para seleccionar preguntas al azar de una lista.
-   <img src="https://github.com/kprieto/Python/blob/main/imagenes/pregunta.png" alt="Pregunta Ejemplo" >
-   
+2. Generación aleatoria: Se emplea la función random de Python para seleccionar preguntas al azar de una lista.   
 4. Interacción con el usuario: Se utilizan funciones de entrada y salida para que el jugador introduzca sus respuestas y el programa las evalúe.
-5. Conteo de puntos: Se implementa un sistema para llevar la cuenta de los aciertos y errores del jugador.
-6. Puntación: Al finalizar el juego de mostrará un mensaje con la puntuación obtenida de la trivia.
+   <img src="https://github.com/kprieto/Python/blob/main/imagenes/pregunta.png" alt="Pregunta Ejemplo" >
+6. Conteo de puntos: Se implementa un sistema para llevar la cuenta de los aciertos y errores del jugador.
+7. Puntación: Al finalizar el juego de mostrará un mensaje con la puntuación obtenida de la trivia.
    <img src="https://github.com/kprieto/Python/blob/main/imagenes/resultado.png" alt="Puntuación" >
 
 Link: [Juego de Trivia](https://github.com/kprieto/Python/blob/main/juegoTrivia.py).
