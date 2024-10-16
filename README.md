@@ -39,6 +39,7 @@
 > El juego de piedra, papel o tijera es un clásico y sencillo juego de azar para dos o más personas.
 > 
 > Es muy popular en todo el mundo y se utiliza a menudo para tomar decisiones rápidas y divertidas.
+
 **¿Cómo se juega?**
 1. Los gestos: Cada jugador tiene tres opciones:
    1. Piedra: Se representa cerrando el puño ✊.
@@ -55,6 +56,7 @@
 > Un juego de trivia es una excelente forma de poner a prueba tus conocimientos y divertirte al mismo tiempo.
 > 
 > Consiste en una serie de preguntas de opción múltiple sobre temas que contemplan a Python.
+
 **¿Cómo se juega?**
 1. Datos inciales: El jugador debe ingresar su nombre y edad. El jugador debe ser mayor de edad para iniciar el juego de la trivia.
 2. Generación aleatoria: Se emplea la función random de Python para seleccionar preguntas al azar de una lista.
@@ -64,4 +66,19 @@
 5. Conteo de puntos: Se implementa un sistema para llevar la cuenta de los aciertos y errores del jugador.
 6. Puntación: Al finalizar el juego de mostrará un mensaje con la puntuación obtenida de la trivia.
    <img src="https://github.com/kprieto/Python/blob/main/imagenes/resultado.png" alt="Puntuación" >
+
+## Catálogo de Películas
+> Un catálogo de películas es como una biblioteca, pero en lugar de libros, contiene información sobre películas.
+> 
+> Es una herramienta muy útil para organizar, buscar y descubrir nuevas películas.
+
+**¿Comó se utiliza?**
+1. Bienvenida al Catálogo de Películas.
+2. Creación del Catálogo de Películas: El usuario deberá ingresar el nombre de un género para crear el catálogo o abrir uno ya existente.
+   <img src="https://github.com/kprieto/Python/blob/main/imagenes/creacionCP.png" alt="Creación CP">   
+3. Menú de opciones del Catálogo de Películas: Se mostrará un menú con las diferentes opciones que podrá el usuario realizar dentro de un Catálogo.
+   <img src="https://github.com/kprieto/Python/blob/main/imagenes/menuCP.png" alt="Menú CP"> 
+   
+4. Despedida: Mensaje de despedida por ingresar al Catálogo de Películas.
+   <img src="https://github.com/kprieto/Python/blob/main/imagenes/mensajeD.png" alt="Mensaje Despedida"> 
    
